@@ -1,0 +1,264 @@
+@font-face 
+{
+    font-family: 'Baloo 2';
+    src: url("../font/Baloo2-Regular.ttf");
+}
+
+
+@font-face 
+{
+    font-family: 'Poppins';
+    src: url("../font/Poppins-Regular.ttf");
+}
+
+:root 
+{
+    /*COLORS*/
+    --formBgColor:#fff;
+    --formColor:#7e7e7e;
+    --formErrorColor:#f00;
+    --submitBgColor:#4CAF50;
+    --cleanBgColor:#ccc;
+
+    /*FONTS*/
+    --contactFont1:'Baloo 2';
+    --contactFont2:'Poppins';
+}
+
+*
+{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body 
+{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../../img/contact/contact_bg_2.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+
+
+.contact-wrapper 
+{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.contact-inner-wrapper
+{
+    display:grid ;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 20px;
+    padding: 30px;
+    background:var(--formBgColor);
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);    
+    border-radius: 5px;
+
+}
+
+.contact-form 
+{
+    padding-top: 20px;
+}
+.contact-form form 
+{
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+
+}
+
+.contact-form form input 
+{
+    width:300px;
+    background:rgba(0,0,0,0);
+    border:0;
+    border-bottom: 1px solid var(--formColor);
+    font-family: var(--contactFont2), sans-serif;
+    color:var(--formColor);
+}
+
+.contact-form form textarea 
+{
+    width:300px;
+    border:0;
+    border-bottom:1px solid var(--formColor);
+    font-family: var(--contactFont2), sans-serif;
+    color:var(--formColor);
+}
+
+.contact-form form > * 
+{
+    margin-top: 30px;
+}
+
+
+.contact-form form > span 
+{
+    display:none;
+    margin-top: 0;
+    font-family: var(--contactFont2), sans-serif;
+    font-size: 12px;
+    color:var(--formErrorColor);
+}
+
+
+
+.contact-info 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: var(--contactFont1), cursive;
+    line-height: 40px;
+}
+
+.contact-info h1 
+{
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.contact-info ul 
+{
+    list-style-type: none;
+    padding-top: 20px;
+    color: var(--formColor);
+}
+
+
+
+.button 
+{
+    width:300px;
+    display: flex;
+    flex-direction: row;
+    text-transform: capitalize;
+
+}
+
+
+.contact-form form input[type="submit"]
+{
+    border:0;
+    background:var(--submitBgColor);
+    width: 150%;
+    padding:10px;
+    color:var(--formBgColor);
+    margin-right: 10px;
+}
+
+.contact-form form input[name="clean"]
+{
+    background: var(--cleanBgColor);
+    color:var(--formBgColor);
+    border:0;
+}
+
+/*-------------nav-bar override-----------------*/
+
+nav 
+{
+    position: static;
+    width:100%;
+    background:rgba(0,0,0,0);
+    display: grid;
+    box-shadow: none;
+}
+
+.logo > a 
+{
+    color:#fff;
+}
+
+.log > span 
+{
+    color:#7e7e7e;
+}
+
+.dropdown-content 
+{
+    background:rgba(0,0,0,0);
+}
+
+.dropdown-content > li:hover , .dropdown-content > input[type="submit"]:hover
+{
+    background:rgba(255,255,255,0.1);
+}
+
+
+
+
+/*--------------footer override-----------------*/
+footer 
+{
+    background:rgba(0,0,0,0);
+}
+
+/*---------------------------RESPONSIVE------------------*/
+
+
+   
+
+
+@media (max-width:800px)
+{
+    .contact-wrapper 
+    {
+       margin-top: 20px;
+    }
+
+    .contact-inner-wrapper
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info 
+    {
+        line-height: 30px;
+    }
+
+    .contact-form form > * 
+    {   
+        margin-bottom: 20px;
+    }
+
+
+    
+    .contact-info 
+    {
+        font-size: 10px;
+        line-height: 20px;
+    }
+
+    .contact-info ul 
+    {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contact-info ul > li 
+    {
+        padding-right:15px;
+    }
+
+    .contact-form input ,  .contact-form  textarea
+    {
+        width:200px;
+        font-size: 10px;
+
+    }
+    
+    .contact-form form > * 
+    {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}

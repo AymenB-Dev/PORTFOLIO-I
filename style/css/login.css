@@ -1,0 +1,157 @@
+@font-face 
+{
+    font-family: 'Poppins';
+    src: url("../font/Poppins-Regular.ttf");
+}
+
+
+:root 
+{
+    /*COLORS*/
+    --formBgColor:#fff;
+    --formColor:#7e7e7e;
+    --submitBgColor:#4CAF50;
+    --formErrorColor:#f00;
+
+    /*FONTS*/
+
+    --loginFont1:'Poppins';
+}
+* 
+{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body 
+{
+    width: 100%;
+    height: 130vh;
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("../../img/log_in/login_bg.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+
+.login-wrapper 
+{
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-avatar-wrapper 
+{
+    display: absolute;
+}
+
+.login-wrapper .login-avatar > img 
+{
+    width:100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.19);    
+
+}
+
+.login-wrapper .login-avatar 
+{
+    position: relative;
+    top:50px;
+    z-index: 1;
+}
+
+.login-wrapper form 
+{
+    width:300px;
+    display: flex;
+    flex-direction: column;
+    background:var(--formBgColor);
+    padding: 60px 40px 40px 40px;
+
+    border-radius: 10px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);    
+}
+
+
+.login-wrapper form input
+{
+    display:block;
+    background:rgba(0,0,0,0);
+    border:0;
+    border-bottom: .5px solid var(--formColor);
+    font-family: var(--loginFont1), sans-serif;
+    color:var(--formColor);
+}
+
+.login-wrapper form input[type="password"]
+{
+    margin:40px 0px 40px 0px;
+}
+
+.login-wrapper form > span 
+{
+    display:none;
+    margin-top: 0;
+    font-family: var(--loginFont1), sans-serif;
+    font-size: 12px;
+    color:var(--formErrorColor);
+}
+
+
+
+
+
+.login-wrapper input[type="submit"]
+{
+    border:0;
+    margin:0px;
+    background:var(--submitBgColor);
+    color:var(--formBgColor);
+    padding:10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+
+
+/*-------------nav-bar override-----------------*/
+
+nav 
+{
+    position: absolute;
+    width:100%;
+    background:rgba(0,0,0,0);
+    display: grid;
+    box-shadow: none;
+}
+
+.logo > a 
+{
+    color:#fff;
+}
+
+.log > span 
+{
+    color:#7e7e7e;
+}
+
+
+.dropdown-content 
+{
+    background:rgba(0,0,0,0);
+}
+
+.dropdown-content > li:hover , .dropdown-content > input[type="submit"]:hover
+{
+    background:rgba(255,255,255,0.1);
+}
+
+
+/*--------------footer override-----------------*/
+footer 
+{
+    background:rgba(0,0,0,0);
+}

@@ -1,0 +1,601 @@
+@font-face 
+{
+    font-family: 'Baloo 2';
+    src: url("../font/Baloo2-Regular.ttf");
+}
+
+
+@font-face 
+{
+    font-family: 'Poppins';
+    src: url("../font/Poppins-Regular.ttf");
+}
+
+
+:root 
+{
+    /*COLORS*/
+    --headerColor:#fff;
+    --titleColor:#7E7E7E;
+    --titleColor2:#2a2a2a;
+    --bgColor:#f7f7f7;
+    --borderColor:#C49B76;
+    /*FONTS*/
+
+    --font1:'Baloo 2';
+    --font2:'Poppins';
+
+}
+
+*
+{
+   
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font1), cursive;
+}
+
+body
+{
+    width:100%;
+    background: var(--bgColor);
+}
+
+
+
+
+/*-------------HEADER-----------------------*/
+header 
+{
+    display: grid;
+    grid-template-rows: repeat(12,1fr);
+    height:100vh;
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("../../img/home/home_bg.jpg") no-repeat center center;
+    background-size: cover;
+    margin:0;
+    padding: 0;
+   
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+
+.description-wrapper 
+{
+    display:grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-row-start:5;
+}
+.description 
+{
+    grid-column: 3/12;
+    color:var(--headerColor);
+
+}
+
+.description h1 
+{
+    text-transform: uppercase;
+    font-size:60px;
+    font-weight: 700;
+ 
+}
+
+.description h3
+{
+    text-transform: capitalize;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.description h3 span
+{
+    margin-right:20px;
+}
+
+
+
+.description .social-media
+{
+    padding-top: 20px;
+}
+
+.description .social-media  a 
+{
+    text-decoration: none;
+    color:var(--headerColor);
+}
+.description .social-media i 
+{
+   display: inline;
+   margin-right:40px;   
+}
+
+
+/*-------------------------ABOUT---------------------------*/
+.about 
+{
+    display: grid;
+    grid-template-columns: 0.6fr 1.4fr;
+    column-gap: 20px;
+    color:var(--titleColor);
+    padding: 100px ;
+
+
+}
+
+.about .side-img .avatar img 
+{
+    position: absolute;
+    width:200px;
+    height:300px;
+    left:30px;
+    top:-40px;
+    
+}
+
+.about .side-img .avatar
+{
+    
+    position: absolute;
+    width:200px;
+    height:300px;
+    border: 10px solid var(--borderColor);
+}
+
+.about-content h1
+{
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.about-content p 
+{
+    line-height: 30px;
+    text-align: justify;
+}
+
+/*--------------------CV--------------------------------*/
+
+
+.title
+{
+    color:var(--titleColor);
+    font-size:30px;
+    font-weight: bold;
+    font-family: var(--font2), sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-align: center;    
+    color:var(--titleColor2);
+}
+
+
+.cv-content 
+{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 80px 80px 0px 80px;
+    font-family: var(--font1), sans-serif;
+    font-size: 14px;
+    line-height: 40px;
+
+}
+
+
+.cv-content > * 
+{
+    background: var(--headerColor);
+    padding:10px;
+    padding-bottom: 0; 
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);    
+}
+
+
+
+.cv-sub-container
+{
+    
+    text-align: center;
+    display: grid;
+    text-transform: capitalize;
+}
+
+.cv-sub-container > h1 
+{
+    height: 30px;
+    font-weight: 10;
+    letter-spacing: 5px;
+    margin-bottom:40px;
+}
+
+.cv-sub-container   i
+{
+    display: inline;
+}
+
+
+/*-------------------------GENERAL INFO----------------------*/
+.cv-content > .general-info 
+{
+    display: grid;
+    grid-column: 1/6;
+}
+.general-info > ul 
+{
+    list-style-type: none;
+    text-align: left;
+    padding: 0px 0px 20px 50px;
+}
+
+.general-info > ul > li 
+{
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+}
+
+.basic-info 
+{
+    width:200px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+/*---------------------------------------------------------*/
+
+/*------------------------------SKILLS---------------------*/
+.cv-content > .skills
+{
+    display: grid;
+    grid-column: 6/13;
+    width:auto;
+}
+.skills-content 
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+
+canvas 
+{
+    display:absolute;
+}
+
+/*------------------------------------------------------*/
+/*-----------------EDUCATION---------------------------*/
+
+
+.cv-content > .education
+{
+    display: grid;
+    grid-column: 1/13;
+    
+}
+    
+.education-content 
+{
+    display:grid;
+    grid-template-columns: 1;
+    grid-row-gap: 50px;
+    text-align: left;
+    padding:0px 50px 50px 50px;
+    line-height: 30px;
+}
+
+.img-education 
+{
+    display: flex;
+    border : 1px solid #000;
+    width:100px;
+    height: 100px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.img-education  img 
+{
+    width : 90px ;
+    height:90px;
+}
+.education-level 
+{
+    display: grid;
+    grid-template-columns: 0.4fr 1.6fr;
+    grid-column-gap: 5px;
+    text-transform: uppercase;
+}
+
+.education-level h4 
+{
+    color:var(--titleColor);
+}
+
+
+
+
+
+/*---------------------------------GALLARY-----------------------*/
+
+.gallery 
+{
+    padding:80px; 
+}
+
+.gallery h1 
+{
+    margin-bottom:80px;
+
+}
+
+
+.gallery-content 
+{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-row-gap:40px;
+    grid-column-gap:40px;
+    background: var(--headerColor);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);    
+    align-items: center;
+    padding: 20px;
+}
+
+.gallery-content > *
+{
+    text-align: center;
+}
+
+.img-card img 
+{
+    width:200px;
+    height:200px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);    
+
+}
+
+.img-card:hover 
+{
+    opacity:0.8;
+    cursor: pointer;
+}
+
+
+.img-card .project-des 
+{
+    display:none;
+}
+
+
+
+/*-----------------ABOUT THE CITY DYNAMIC PART---------------*/
+#close-btn 
+{
+    position: fixed;
+    top:20px;
+    right:30px;
+    color:#fff;
+    font-size:30px;
+    font-weight: 100;
+    cursor: pointer;
+}
+#project-details 
+{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+}
+
+
+
+#project-details img 
+{
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+}
+
+
+#project-details p
+{
+    margin:20px 0 0 0 ;
+    padding:0 100px 0 100px;
+    color:#fff;
+    letter-spacing: 2px;
+    font-weight: 100;
+    
+
+}
+
+
+/* Animation */
+#project-details-img
+{  
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+  
+@keyframes zoom 
+{
+    from {transform: scale(0.1)} 
+    to {transform: scale(1)}
+}
+
+  
+
+
+
+
+/*---------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+/*-----------------------------------*/
+
+/*--------------------RESPONSIVE DESIGN-----------------------*/
+
+
+
+@media (max-width: 786px)
+{
+    .skills-content 
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    canvas 
+    {
+        width:90%;
+        height: 90%;
+    }
+
+    .basic-info 
+    {
+        letter-spacing: 3px;
+        width:100px;
+    }
+
+    
+}
+
+@media (max-width: 986px) 
+{
+    
+    .description h1 
+    {
+        font-size:40px;
+    }
+
+    .description h3
+    {
+        font-size: 15px;
+    }
+
+    .about 
+    {
+        grid-template-columns: 1fr;
+        padding-top:60px;
+    }
+
+    .side-img 
+    {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    .about .side-img .avatar img 
+    {
+        position: static;
+        border:10px solid #C49B76;
+    }
+
+    .about .side-img .avatar
+    {
+        position: static;
+        border: 0;
+        margin-bottom: 20px;
+    }
+
+
+    /*---------------------CV------------------------------*/
+    .cv-content 
+    {
+        grid-template-columns: 1fr;
+    }
+    .cv-content > .general-info
+    {
+        display: grid;
+        grid-column: 1/13;
+    }
+    .cv-content > .skills
+    {
+        grid-column: 1/13;
+    }
+    .cv-content > .education
+    {
+        grid-column: 1/13;
+    }
+
+    .education-level
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .education-level 
+    {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .img-education 
+    {
+        margin-bottom: 10px;
+    }
+
+
+    /*----------------GALLERY--------------*/
+    .gallery-content 
+    {
+        grid-template-columns: 1fr 1fr;
+        
+    }
+    .img-card img 
+    {
+        width:100px;
+        height:100px;
+    }
+
+    .img-card
+    {
+        width:100px;
+        height:100px;
+      
+    }
+
+}
+
+@media (max-width: 400px) {
+    
+    .img-card img 
+    {
+        width:60px;
+        height:60px;
+    }
+
+    .img-card
+    {
+        width:60px;
+        height:60px;
+      
+    }
+ }
+
+
+
+
+
+

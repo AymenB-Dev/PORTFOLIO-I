@@ -1,0 +1,73 @@
+
+@font-face 
+{
+    font-family: 'Poppins';
+    src: url("../font/Poppins-Regular.ttf");
+}
+
+:root 
+{
+    /*COLORS*/
+    --bgColor:#2a2a2a;
+    --color:#fff;
+    --thColor:#D21034;
+    --tdBorderColor:#a0a0a0;
+    /*FONTS*/
+
+    --contactControlFont:'Poppins';
+
+}
+
+* 
+{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: var(--contactControlFont);
+}
+
+
+body 
+{
+    display: flex;
+    flex-direction: column wrap;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: var(--bgColor);
+
+    overflow: hidden;
+}
+table 
+{
+    table-layout: fixed;
+    width:600px;
+}
+table,tr,th,td 
+{
+   
+    border-collapse: collapse;
+    border : 2px solid var(--tdBorderColor);
+    font-weight: 400;
+}
+
+th,td 
+
+{
+    text-align: center;
+    padding:5px 10px 5px 10px;
+    word-wrap: break-word;         
+    overflow-wrap: break-word; 
+}
+th
+
+{
+    color:var(--color);
+}
+
+td
+
+{
+    color:var(--color);
+}
+

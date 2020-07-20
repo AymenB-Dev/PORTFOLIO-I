@@ -1,0 +1,558 @@
+@font-face 
+{
+    font-family: 'Baloo 2';
+    src: url("../font/Baloo2-Regular.ttf");
+}
+
+
+@font-face 
+{
+    font-family: 'Poppins';
+    src: url("../font/Poppins-Regular.ttf");
+}
+
+
+
+:root 
+{
+    /*COLORS*/
+    --headerColor:#fff;
+    --titleColor:#7E7E7E;
+    --titleColor2:#2a2a2a;
+    --bgColor:#f7f7f7;
+    --borderColor:#C49B76;
+    --thColor:#D21034;
+    --tdBorderColor:#006233;
+    /*FONTS*/
+
+    --cityFont1:'Baloo 2';
+    --cityFont2:'Poppins';
+
+}
+
+*
+{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    font-family: var(--cityFont1), cursive;
+
+}
+
+body 
+{
+
+    background: var(--bgColor);
+    
+}
+
+
+
+/*-----------------------------------------------*/
+/*                   HEADER                      */
+/*-----------------------------------------------*/
+header 
+{
+    height:100vh;
+    background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("../../img/city/city_bg_3.jpg") 50% 50% no-repeat;
+    background-size:cover;
+    
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.description-wrapper 
+{
+    height:100%;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    flex-direction: column;
+    align-items: center;
+    color:var(--headerColor);
+
+
+}
+
+.description 
+{
+    grid-column: 4/12;
+}
+
+.description h1 
+{
+    text-transform: uppercase;
+    font-size:60px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.description-content 
+{
+    display: none;
+}
+
+
+/*-------------------------------------*/
+/*              SECTIONS               */
+/*-------------------------------------*/
+
+.section-wrapper
+{
+    width:100%;
+    background: var(--bgColor);
+    height:auto;
+    padding:50px 50px 50px 50px;
+    overflow: hidden;
+
+}
+
+.section-inner-wrapper 
+{
+    background: var(--headerColor);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.2);    
+    padding:30px;
+    overflow: hidden;
+
+}
+/*-----------------------GENERAL INFO--------------------*/
+.country-general-info 
+{
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-column-gap: 20px;
+}
+
+.country-general-info  > *
+{
+    display: grid;
+    
+}
+.country-general-info .img
+{
+   justify-content: center;
+}
+
+.country-general-info img
+{
+    width:200px;
+    height: 200px;
+}
+
+.country-general-info .table-info 
+{
+   overflow-x: auto;
+   justify-content: center;
+}
+
+
+
+.country-general-info table,tr,th,td
+{
+    border-collapse: collapse;
+    border-bottom: 2px solid var(--tdBorderColor);
+    font-size: 14px;
+    text-transform: capitalize;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+}
+
+
+.country-general-info th,td 
+
+{
+    text-align: center;
+    padding:5px 10px 5px 10px;
+}
+
+.country-general-info th
+
+{
+    color:var(--thColor);
+}
+
+.country-general-info td
+
+{
+    color:var(--titleColor);
+}
+
+.country-general-info td ul 
+{
+    list-style: none;
+}
+
+
+
+.country-general-info .location 
+{
+   
+    display: flex;
+    margin-top: 20px;
+}
+
+
+/*--------------------------------------------------------*/
+.title
+{
+    color:var(--titleColor);
+    font-size:30px;
+    font-weight: bold;
+    font-family: var(--cityFont2), sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-align: center;    
+    margin-top: 50px;
+}
+/*-----------------TOP DESTINATIONS-----------------------*/
+
+.top-destinations 
+{
+    padding:50px 80px 50px 80px;
+}
+
+
+.lSSlideOuter .lSPager.lSpg > li:hover a, .lSSlideOuter .lSPager.lSpg > li.active a
+{
+    background-color: var(--tdBorderColor);
+}
+
+.lSSlideOuter .lSPager.lSpg > li a 
+{
+    background-color: var(--titleColor);
+}
+
+.top-destinations ul li .city-card
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:50px;
+    padding: 10px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.2);    
+}
+
+.city-card .city-img img 
+{
+    width:100%;
+    height:150px;
+}
+
+.city-card .city-img img:hover
+{
+    opacity:0.8;
+}
+
+.city-card .city-des 
+{
+    display:none;
+}
+
+
+
+.city-card  h4 
+{
+   color:var(--titleColor);
+   font-weight: 10;
+   text-transform: capitalize;
+   letter-spacing: 3px;
+    
+}
+
+/*-----------------ABOUT THE CITY DYNAMIC PART---------------*/
+#close-btn 
+{
+    position: fixed;
+    top:20px;
+    right:30px;
+    color:#fff;
+    font-size:30px;
+    font-weight: 10;
+    cursor: pointer;
+}
+#show-up-details 
+{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+    overflow: scroll;
+}
+
+
+
+#show-up-details img 
+{
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+}
+#show-up-details h1
+{
+    font-size:40px;
+    font-weight: 10;
+    color: #fff;
+    text-transform: capitalize
+}
+
+#show-up-details p
+{
+    padding:0px 100px 0px 100px;
+    color:#fff;
+    letter-spacing: 2px;
+    font-weight: 10;
+}
+
+
+/* Animation */
+#show-up-details-img
+{  
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+  
+@keyframes zoom 
+{
+    from {transform: scale(0.1)} 
+    to {transform: scale(1)}
+}
+
+  
+
+/*-----------------------------------------------------------*/
+/*                     CULTURE                               */
+/*-----------------------------------------------------------*/
+
+.culture-img img 
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding: 30px;
+}
+
+.culture-wrapper 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.culture-content
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.culture-content:nth-child(even)
+{
+    flex-direction: row-reverse;
+}
+
+.culture-description 
+{
+    line-height: 30px;
+}
+
+.culture-description h1 
+{
+    font-weight: 10;
+    text-transform: capitalize;
+}
+.culture-description p 
+{
+    text-align: justify;
+    color:var(--titleColor2)
+}
+
+
+/*----------------------------------------------------*/
+/*             FAMOUS MONUMENTS                       */
+/*---------------------------------------------------*/
+.top-destinations ul li .monument-card
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:50px;
+    padding: 10px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.2);    
+}
+
+.monument-card .monument-img img 
+{
+    width:100%;
+    height:150px;
+}
+
+.monument-card .monument-img img:hover
+{
+    opacity:0.8;
+}
+
+.monument-card .monument-des 
+{
+    display:none;
+}
+
+
+
+.monument-card  h4 
+{
+   color:var(--titleColor);
+   font-weight: 10;
+   text-transform: capitalize;
+   letter-spacing: 3px;
+    
+}
+
+
+
+/*-----------------------------------------------------*/
+/*-------------------RESPONSIVE DESING-----------------*/
+
+
+
+@media (max-width:586px)
+{
+    .description h1 
+    {
+
+    font-size:50px;
+    
+    }
+
+    .responsive-table
+    {
+        display: none;
+    }
+    .country-general-info table 
+    {
+        table-layout: fixed;
+        width:300px;
+
+    }
+    .country-general-info table,tr,th,td
+    {
+        font-size: 7;
+    }
+
+    .culture-description h1 
+    {
+        font-size:14px;
+    }
+    .culture-description p 
+    {
+        font-size:12px
+    }
+
+
+   
+}
+
+@media (max-width:786px)
+{
+    .title 
+    {
+        font-size: 20px;
+    }
+
+    .country-general-info table,tr,th,td
+    {
+        font-size: 10px;
+    }
+
+    .top-destinations ul li .city-card
+    {
+        
+        margin:5px;
+        padding: 10px;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.2);    
+    }
+
+    .top-destinations ul li .monument-card
+    {
+        
+        margin:5px;
+        padding: 10px;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.2);    
+    }
+
+
+    #close-btn 
+    {
+        font-size:20px;
+    }
+
+
+
+    #show-up-details img 
+    {
+        width:150px;
+        height:150px;
+    }
+
+    #show-up-details h1
+    {
+        font-size:20px;
+    }
+
+    #show-up-details p
+    {
+        padding:0px 10px 0px 10px;
+        color:#fff;
+        letter-spacing: 2px;
+        font-weight: 100;
+    }
+
+    .city-card h4 
+    {
+        font-size:10px;
+    }
+    
+    .monument-card  h4 
+    {
+        font-size:10px;
+        letter-spacing: 1px;
+        
+    }
+
+
+
+}
+@media (max-width:986px)
+{
+    .country-general-info
+    {
+        grid-template-columns: 1fr;
+        grid-row-gap:20px;
+    }
+
+    .culture-content,.culture-content:nth-child(even)
+    {
+        flex-direction: column;
+    }
+    .country-general-info img
+    {
+        width:100px;
+        height: 100px;
+    }
+
+    
+}
