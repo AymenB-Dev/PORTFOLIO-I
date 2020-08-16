@@ -1,7 +1,7 @@
 
 /*--------------TYPING ANIMATION FOR THE HEADER --------------*/
 //Initialize the word list that is going to be shown 
-let wordList = ["Aymen Bennabi"] ;
+let wordList = ["Aymen Ben"] ;
 
 //Get status class elements
 let listStatus = $(".status");
